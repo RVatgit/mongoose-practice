@@ -1,0 +1,7 @@
+extends layout
+
+block content
+    h1 Articles
+    each c ,i in con
+        li.list-group-item
+            a(href='/articles/'+c._id) #{c.title}

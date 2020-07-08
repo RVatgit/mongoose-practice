@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h1 #{data.title}
+    h3 Written by #{data.author}
+    p #{data.body}
+    br
+    a.btn.btn-primary(href="/articles/edit/"+ data._id) Edit
+    a.btn.btn-primary.delete(href="#",data-id=data._id) Delete

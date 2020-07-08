@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    form(action="/register", method="post")
+        .form-group
+            label Name
+            input.form-control(type="text",name="name",value=old?old.name:"")
+        .form-group
+            label User Name
+            input.form-control(type="text",name="uname",value=old?old.uname:"")
+        .form-group
+            label Email
+            input.form-control(type="email",name="email",value=old?old.email:"")
+        .form-group
+            label Password
+            input.form-control(type="password",name="psd",value=old?old.psd:"")
+        .form-group
+            label Confirm Password
+            input.form-control(type="password",name="cpsd",value=old?old.cpsd:"")
+        .form-group
+            label Mobile
+            input.form-control(type="text",name="mobile",value=old?old.mobile:"")
+        .br
+        button.btn.btn-success(type="submit") Register
